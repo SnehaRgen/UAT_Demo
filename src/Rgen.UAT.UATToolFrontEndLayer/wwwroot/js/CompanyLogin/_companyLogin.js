@@ -16,15 +16,17 @@ var _companydetails =
                 var State = $('#' + _container[8] + ' option:selected');
                 var Pwd = $('#' + _container[9] + '');
                 var TxtmobileNo = $('#' + _container[10] + '');
-                var tempData;
-                if ($('#chkTempData').is(":checked") == true) {
-                    //alert("Checkbox is checked.");
-                    tempData = true;
-                }
+               
                 var SpanSaveMsg = "";
                 if (SaveMsg != undefined) {
                     SpanSaveMsg = $('.' + SaveMsg + '');
                 }
+                 var tempData;
+                if ($('#chkTempData').is(":checked") == true) {
+                    tempData = "true";
+                }
+                else
+                    tempData = "false";
                 var values = {
                     'FirstName': fname.val(),
                     'LastName': Lname.val(),
